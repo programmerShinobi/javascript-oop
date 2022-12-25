@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object -  Method @ Construction Function</title>
+</head>
+
+<body>
+    <script>
+        function Person() {
+            this.firstName = "";
+            this.middleName = "";
+            this.lastName = "";
+            this.sayHello = function(name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`)
+            }
+        }
+        
+        const faqih = new Person();
+        faqih.firstName = "Faqih";
+        faqih.middleName = "Pratama";
+        faqih.lastName = "Muhti";
+        faqih.sayHello("Ayah");
+
+        const fitrya = new Person();
+        fitrya.firstName = "Fitrya";
+        fitrya.middleName = "";
+        fitrya.lastName = "Muhti";
+        fitrya.sayHello("Ibu");
+
+        console.info(faqih);
+        console.info(fitrya);
+    </script>
+</body>
+
+</html>

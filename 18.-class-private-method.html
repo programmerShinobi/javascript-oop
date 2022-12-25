@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class : Private Method</title>
+</head>
+<body>
+    <script>
+
+        class Person{
+
+            say(name) {
+                if (name) {
+                    this.#sayWithName(name);
+                } else {
+                    this.#sayWithoutName();
+                }
+            }
+
+            #sayWithoutName() {
+                console.info("Hello")
+            }
+
+            #sayWithName(name) {
+                console.info(`Hello ${name}`)
+            }
+
+        }
+
+        const faqih = new Person();
+        faqih.say("Shinobi");
+        // faqih.#sayWithoutName(); // Error Private Function (Method)
+
+    </script>
+</body>
+</html>
